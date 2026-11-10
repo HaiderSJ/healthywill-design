@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow, noarchive, nosnippet, noimageindex">
+<meta name="googlebot" content="noindex, nofollow">
+<meta name="referrer" content="no-referrer">
+<meta name="theme-color" content="#0B7A8C">
+<title>Healthy Will — Signing In</title>
+<meta name="description" content="Private design review document.">
+<meta property="og:title" content="Design review">
+<meta property="og:description" content="Private document, shared for review.">
+<style>
+:root{
+  --ink:#0E2A33; --ink-2:#44636D; --ink-3:#5C777F; --ink-t:#3E5A63;
+  --brand:#0B7A8C; --brand-h:#096B7A; --brand-d:#075966;
+  --tint:#E6F4F6; --tint-b:#BFE0E5; --btext:#075966; --tint-50:#F2F9FA;
+  --accent:#C2703D; --acc-t:#FBF0E8; --acc-x:#8F4F26;
+  --bg:#FBFCFC; --sf:#FFF; --canvas:#F4F8F9;
+  --line:#DCE6E8; --line-s:#7A8F99;
+  --ok:#1F7A53; --ok-t:#E8F5EE; --ok-x:#14603F;
+  --wn:#855C0D; --wn-t:#FBF2DF; --wn-x:#6E4C0B;
+  --bd:#A3312B; --bd-t:#FBECEA; --bd-x:#7E2520;
+  --s1:0 1px 2px rgba(14,42,51,.06);
+  --s2:0 1px 2px rgba(14,42,51,.06),0 8px 24px rgba(14,42,51,.06);
+  --s3:0 2px 4px rgba(14,42,51,.05),0 18px 48px rgba(14,42,51,.10);
+  --snav:0 -1px 2px rgba(14,42,51,.06),0 -8px 24px rgba(14,42,51,.06);
+  --f:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --m:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:62px;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f);
+  font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased;
+  font-variant-numeric:tabular-nums;overflow-x:hidden}
+h1,h2,h3{margin:0;line-height:1.2;font-weight:600;letter-spacing:-.015em}
+h1{font-size:clamp(28px,7vw,42px);line-height:1.08}
+h2{font-size:clamp(23px,5.4vw,30px)}
+h3{font-size:clamp(18px,4.4vw,20px);line-height:1.3}
+p{margin:0}
+a{color:var(--btext);text-decoration:underline;text-underline-offset:2px;
+  text-decoration-thickness:1px;text-decoration-color:rgba(7,89,102,.45)}
+.nl a{text-decoration:none}
+:focus-visible{outline:2px solid var(--brand);outline-offset:2px;border-radius:4px;box-shadow:0 0 0 1px #fff}
+img,svg{max-width:100%}
+code{font-family:var(--m);font-size:.86em;background:var(--canvas);color:var(--ink);
+  padding:2px 6px;border-radius:5px;border:1px solid var(--line);word-break:break-word}
+
+.w{max-width:1120px;margin:0 auto;padding:0 20px}
+@media(min-width:760px){.w{padding:0 28px}}
+
+.nav{position:sticky;top:0;z-index:70;background:rgba(251,252,252,.94);
+  backdrop-filter:blur(12px);border-bottom:1px solid var(--line);padding-top:env(safe-area-inset-top)}
+.nv{max-width:1120px;margin:0 auto;padding:10px 20px;display:flex;align-items:center;gap:14px}
+.bd2{display:flex;align-items:center;gap:9px;font-weight:600;white-space:nowrap;font-size:16px}
+.bm{width:27px;height:27px;border-radius:8px;flex:none;
+  background:linear-gradient(135deg,var(--brand-d),var(--brand));
+  display:grid;place-items:center;color:#fff;font-size:13px;font-weight:700}
+.nl{display:flex;gap:17px;margin-left:auto;font-size:14px;overflow-x:auto;
+  scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.nl::-webkit-scrollbar{display:none}
+.nl a{color:var(--ink-2);white-space:nowrap;display:flex;align-items:center;min-height:44px}
+
+.hero{padding:46px 0 36px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;pointer-events:none;
+  background:radial-gradient(520px 300px at 88% -14%,rgba(11,122,140,.10),transparent 70%)}
+.hero>*{position:relative}
+.eb{display:inline-flex;gap:7px;font-size:12.5px;font-weight:600;letter-spacing:.07em;
+  text-transform:uppercase;color:var(--btext);background:var(--tint);padding:7px 13px;border-radius:999px}
+.ld{margin-top:16px;font-size:17px;color:var(--ink-2);max-width:62ch}
+@media(min-width:760px){.hero{padding:62px 0 46px}.ld{font-size:18px}}
+
+section{padding:40px 0;border-top:1px solid var(--line)}
+@media(min-width:760px){section{padding:54px 0}}
+.sh{max-width:66ch;margin-bottom:26px}
+.sn{font-size:12.5px;font-weight:600;letter-spacing:.07em;color:var(--ink-t);text-transform:uppercase}
+.sh h2{margin-top:9px}
+.sh p{margin-top:11px;color:var(--ink-2)}
+.sub{margin:32px 0 16px}
+.sub h3{display:flex;align-items:baseline;gap:9px;flex-wrap:wrap}
+.sub p{color:var(--ink-2);font-size:15.5px;margin-top:6px}
+
+.g{display:grid;gap:14px;grid-template-columns:1fr}
+.g>*{min-width:0}
+@media(min-width:620px){.g2,.g3,.g4{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:960px){.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}}
+
+.c{background:var(--sf);border:1px solid var(--line);border-radius:16px;padding:18px;box-shadow:var(--s1)}
+.c.fl{box-shadow:none}
+.c.lf{box-shadow:var(--s2)}
+.c.ti{background:var(--tint);border-color:var(--tint-b);box-shadow:none}
+.c.wm{background:var(--acc-t);border-color:#F0DCCC;box-shadow:none}
+.c p{color:var(--ink-2);font-size:15.5px;margin-top:7px}
+.c h3+p{margin-top:6px}
+
+.tw{background:var(--sf);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.ts{overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:15.5px}
+th,td{padding:11px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+thead th{background:var(--canvas);font-size:11.5px;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-2);font-weight:600}
+tbody tr:last-child td,tbody tr:last-child th{border-bottom:0}
+tbody th[scope=row]{font-weight:600;font-size:15.5px;letter-spacing:0;text-transform:none;
+  color:var(--ink);background:none}
+@media(max-width:619px){
+  .rt thead{display:none}
+  .rt tr{display:block;border-bottom:1px solid var(--line);padding:12px 14px}
+  .rt tr:last-child{border-bottom:0}
+  .rt td,.rt th{display:block;border:0;padding:3px 0}
+  .rt th[scope=row]{font-size:17px;margin-bottom:3px}
+  .rt td::before{content:attr(data-l);display:block;font-size:11.5px;font-weight:600;
+    letter-spacing:.06em;text-transform:uppercase;color:var(--ink-t);margin-bottom:1px}
+}
+
+.p{display:inline-flex;align-items:center;gap:6px;font-size:14px;font-weight:500;
+  padding:4px 11px;border-radius:999px;white-space:nowrap}
+.p i{font-style:normal;font-size:12px}
+.pk{background:var(--ok-t);color:var(--ok-x)}
+.pw{background:var(--wn-t);color:var(--wn-x)}
+.pb{background:var(--bd-t);color:var(--bd-x)}
+.pi{background:var(--tint);color:var(--btext)}
+.pm{background:#EFF3F4;color:var(--ink-t)}
+
+.cl{border-radius:12px;padding:16px 17px;border:1px solid;font-size:15.5px;line-height:1.6;margin-top:16px}
+.cl h3{font-size:16px;margin-bottom:6px}
+.cl p+p{margin-top:9px}
+.ci{background:var(--tint);border-color:var(--tint-b);color:#09505C}
+.cw{background:var(--wn-t);border-color:#EEDDB7;color:var(--wn-x)}
+.ck{background:var(--ok-t);border-color:#C5E4D5;color:var(--ok-x)}
+.cb{background:var(--bd-t);border-color:#F3CFCC;color:var(--bd-x)}
+
+ul.t{list-style:none;padding:0;margin:10px 0 0}
+ul.t li{position:relative;padding-left:23px;font-size:15.5px;color:var(--ink-2);margin-top:8px}
+ul.t li::before{content:"✓";position:absolute;left:0;color:var(--ok);font-weight:700;font-size:13px}
+ul.t.x li::before{content:"✕";color:var(--bd)}
+ul.t.d li::before{content:"•";color:var(--ink-t);font-size:18px;top:-3px}
+ul.t li b{color:var(--ink)}
+
+/* phone — true 360x800 geometry */
+.ph{width:100%;max-width:382px;margin:0 auto;background:var(--sf);border:1px solid var(--line);
+  border-radius:30px;padding:10px;box-shadow:var(--s3);flex:none}
+.scr{background:var(--bg);border-radius:22px;overflow:hidden;border:1px solid var(--line);
+  display:flex;flex-direction:column;height:772px}
+@media(max-width:619px){
+  .phr{margin-left:-20px;margin-right:-20px}
+  .ph{max-width:none;border-radius:0;border-left:0;border-right:0;padding:0;box-shadow:none}
+  .scr{border-radius:0;border-left:0;border-right:0;height:min(772px,78vh)}
+}
+.hd{padding:11px 14px 12px;background:var(--sf);border-bottom:1px solid var(--line);flex:none}
+.hd .wh{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-t)}
+.hd .tt{font-size:20px;font-weight:600;letter-spacing:-.015em;margin-top:3px;display:flex;align-items:center;gap:5px}
+.hd .ss{font-size:13px;color:var(--ink-2);margin-top:2px}
+.bdy{flex:1;overflow-y:auto;padding:12px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.bdy::-webkit-scrollbar{width:0}
+.bdy.mid{justify-content:center}
+.tb{display:flex;border-top:1px solid var(--line);background:var(--sf);
+  padding:7px 3px 9px;gap:2px;flex:none;box-shadow:var(--snav)}
+.tb span{flex:1;text-align:center;font-size:10px;font-weight:600;color:var(--ink-t);line-height:1.25}
+.tb span.on{color:var(--btext)}
+.tb span::before{content:attr(data-i);display:block;font-size:17px;margin-bottom:2px;font-weight:400}
+.st{padding:10px 12px 11px;background:var(--sf);border-top:1px solid var(--line);flex:none;box-shadow:var(--snav)}
+.mc{background:var(--sf);border:1px solid var(--line);border-radius:14px;padding:13px}
+.mc.lf{box-shadow:var(--s2)}
+.mc.hi{background:var(--tint);border-color:var(--tint-b)}
+.mc.wm{background:var(--acc-t);border-color:#F0DCCC}
+.mc.wn{background:var(--wn-t);border-color:#EEDDB7}
+.mc.bdr{background:var(--bd-t);border-color:#F3CFCC}
+.lb{font-size:11px;font-weight:600;letter-spacing:.05em;text-transform:uppercase;color:var(--ink-t)}
+.h1c{font-size:19px;font-weight:600;letter-spacing:-.01em;margin-top:5px;line-height:1.25}
+.h2c{font-size:16.5px;font-weight:600;margin-top:4px;line-height:1.3}
+.sbt{font-size:13.5px;color:var(--ink-2);margin-top:4px;line-height:1.45}
+.bt{margin-top:11px;background:var(--brand);color:#fff;border-radius:11px;padding:13px;
+  text-align:center;font-weight:600;font-size:15px;box-shadow:var(--s1)}
+.bt.gh{background:transparent;color:var(--btext);border:1.5px solid var(--brand);box-shadow:none}
+.bt.dg{background:var(--bd)}
+.bt.off{background:#E4EAEC;color:#4A6671;box-shadow:none}
+.bt.sm{padding:10px;font-size:14px;margin-top:9px}
+.b2r{display:flex;gap:8px;margin-top:10px}
+.b2r .bt{flex:1;margin-top:0}
+
+/* auth-specific */
+.logo{width:62px;height:62px;border-radius:18px;margin:0 auto;
+  background:linear-gradient(135deg,var(--brand-d),var(--brand));
+  display:grid;place-items:center;color:#fff;font-size:27px;font-weight:700;box-shadow:var(--s2)}
+.wordmark{text-align:center;font-size:23px;font-weight:600;letter-spacing:-.02em;margin-top:13px}
+.tagline{text-align:center;font-size:14.5px;color:var(--ink-2);margin-top:5px;line-height:1.45}
+.fld{margin-top:13px}
+.fld .fl2{font-size:13.5px;font-weight:600;color:var(--ink-t);margin-bottom:5px;display:block}
+.inp{border:1.5px solid var(--line-s);border-radius:11px;background:var(--sf);
+  padding:14px 13px;font-size:17px;display:flex;align-items:center;gap:9px;min-height:52px}
+.inp.foc{border-color:var(--brand);border-width:2px;box-shadow:0 0 0 3px var(--tint)}
+.inp.err{border-color:var(--bd);border-width:2px}
+.inp .pre{color:var(--ink-2);font-weight:600;flex:none;padding-right:9px;border-right:1px solid var(--line)}
+.inp .ph2{color:#546F79}
+.inp .cur{width:2px;height:21px;background:var(--brand);display:inline-block}
+.hint{font-size:13px;color:var(--ink-2);margin-top:6px;line-height:1.45}
+.hint.er{color:var(--bd-x);font-weight:500;display:flex;gap:6px;align-items:flex-start}
+.hint.ok2{color:var(--ok-x)}
+
+.otp{display:flex;gap:6px;margin-top:4px;justify-content:space-between}
+@media(min-width:420px){.otp{gap:8px}}
+.ob{flex:1 1 0;min-width:0;aspect-ratio:1/1.12;max-width:46px;border:1.5px solid var(--line-s);
+  border-radius:10px;background:var(--sf);display:grid;place-items:center;font-size:23px;font-weight:600}
+.ob.f{border-color:var(--brand);background:var(--tint-50)}
+.ob.cu{border-color:var(--brand);border-width:2px;box-shadow:0 0 0 3px var(--tint)}
+.ob.er{border-color:var(--bd);border-width:2px;background:var(--bd-t);color:var(--bd-x)}
+
+/* a quiet language switcher, top-right. Present, never prominent */
+.langbar{display:flex;justify-content:flex-end;padding:10px 12px 0;flex:none}
+.langsw{display:inline-flex;align-items:center;gap:6px;font-size:13.5px;color:var(--ink-t);
+  border:1px solid var(--line);border-radius:999px;padding:6px 11px;background:var(--sf)}
+.langsw b{font-weight:600;color:var(--ink-2)}
+
+.rolec{display:flex;align-items:flex-start;gap:12px;border:1.5px solid var(--line-s);
+  border-radius:12px;padding:14px 13px;background:var(--sf)}
+.rolec+.rolec{margin-top:9px}
+.rolec .ic{width:38px;height:38px;border-radius:10px;background:var(--tint);color:var(--btext);
+  display:grid;place-items:center;font-size:18px;flex:none}
+.rolec b{display:block;font-size:16px;font-weight:600}
+.rolec span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:2px;line-height:1.4}
+.rolec .ar{margin-left:auto;color:var(--ink-t);align-self:center;flex:none}
+
+.stp2{display:flex;gap:6px;margin-bottom:12px}
+.stp2 div{flex:1;height:5px;border-radius:999px;background:var(--line)}
+.stp2 div.on{background:var(--brand)}
+.stp2 div.dn{background:var(--ok)}
+
+.doc{display:flex;align-items:center;gap:11px;padding:11px 0;font-size:15px}
+.doc+.doc{border-top:1px solid var(--line)}
+.doc .dic{width:34px;height:34px;border-radius:9px;display:grid;place-items:center;font-size:15px;flex:none}
+.doc .dic.ok3{background:var(--ok-t);color:var(--ok-x)}
+.doc .dic.wt{background:var(--wn-t);color:var(--wn-x)}
+.doc .dic.nn{background:var(--canvas);color:var(--ink-t);border:1.5px dashed var(--line-s)}
+.doc b{display:block;font-size:15px;font-weight:600}
+.doc span{font-size:12.5px;color:var(--ink-2)}
+
+
+/* desktop admin frame */
+.ad{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--sf);
+  box-shadow:var(--s2);min-width:0}
+.adtb{min-height:38px;background:var(--canvas);border-bottom:1px solid var(--line);
+  display:flex;align-items:center;padding:8px 13px;gap:8px}
+.dot{width:10px;height:10px;border-radius:50%;background:var(--line-s);flex:none;opacity:.55}
+.adurl{margin-left:9px;font-size:12.5px;color:var(--ink-2);font-family:var(--m);
+  background:var(--sf);border:1px solid var(--line);border-radius:6px;padding:3px 10px;
+  overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.adbd{padding:30px 16px;background:var(--canvas);display:grid;place-items:center;min-height:400px}
+@media(min-width:760px){.adbd{padding:44px 20px}}
+.adcard{background:var(--sf);border:1px solid var(--line);border-radius:16px;
+  padding:26px 20px;width:100%;max-width:382px;box-shadow:var(--s2);min-width:0}
+.adsplit{display:grid;gap:0;grid-template-columns:1fr}
+@media(min-width:860px){.adsplit{grid-template-columns:1fr 1fr}}
+.adside{background:linear-gradient(150deg,var(--brand-d),var(--brand));color:#fff;padding:30px 26px;
+  display:flex;flex-direction:column;justify-content:center}
+.adside h3{color:#fff;font-size:21px}
+.adside p{color:#D6ECEF;font-size:15px;margin-top:9px;line-height:1.55}
+.adside ul{list-style:none;padding:0;margin:17px 0 0}
+.adside li{font-size:14.5px;color:#EAF6F7;padding-left:22px;position:relative;margin-top:9px}
+.adside li::before{content:"✓";position:absolute;left:0;font-weight:700;color:#9FD6DE}
+
+.flow{display:grid;gap:10px;grid-template-columns:1fr}
+@media(min-width:760px){.flow{grid-template-columns:repeat(4,1fr)}}
+.fs{background:var(--sf);border:1px solid var(--line);border-radius:12px;padding:14px;position:relative}
+.fs .num{width:25px;height:25px;border-radius:50%;background:var(--tint);color:var(--btext);
+  display:grid;place-items:center;font-size:12.5px;font-weight:700}
+.fs b{display:block;margin-top:9px;font-size:15.5px}
+.fs span{font-size:13.5px;color:var(--ink-2);display:block;margin-top:4px;line-height:1.45}
+.fs.gate{background:var(--wn-t);border-color:#EEDDB7}
+.fs.gate .num{background:#F3E2BE;color:var(--wn-x)}
+.fs.done{background:var(--ok-t);border-color:#C5E4D5}
+.fs.done .num{background:#CDE8DA;color:var(--ok-x)}
+
+.pcap{margin-top:12px;text-align:center;max-width:382px;margin-left:auto;margin-right:auto}
+.pcap b{font-size:15.5px;display:block}
+.pcap span{font-size:14px;color:var(--ink-2);display:block;margin-top:3px}
+.phr{display:grid;gap:26px;grid-template-columns:1fr}
+@media(min-width:760px){.phr{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1040px){.phr{grid-template-columns:repeat(3,1fr)}}
+
+.sct{font-size:11.5px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+  color:var(--ink-t);margin:0 0 10px}
+.ft{padding:36px 0 54px;border-top:1px solid var(--line);color:var(--ink-3);font-size:14px;
+  padding-bottom:calc(54px + env(safe-area-inset-bottom))}
+@media print{.nav{display:none}section{page-break-inside:avoid}}
+</style>
+</head>
+<body>
+
+<nav class="nav">
+  <div class="nv">
+    <div class="bd2"><span class="bm" aria-hidden="true">H</span>Healthy&nbsp;Will</div>
+    <div class="nl">
+      <a href="#approach">Approach</a>
+      <a href="#family">Family</a>
+      <a href="#caretaker">Caretaker</a>
+      <a href="#office">Your office</a>
+      <a href="#super">Super Admin</a>
+      <a href="#safety">Safety</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+<header class="hero">
+  <div class="w">
+    <span class="eb">Signing in</span>
+    <h1>Four kinds of people. Four different front doors.</h1>
+    <p class="ld">A 78-year-old signing in should face one box and one button. The person who can approve a payout should face considerably more. This is every sign-in and sign-up screen in the platform, and the reasoning behind each.</p>
+  </div>
+</header>
+
+<!-- APPROACH -->
+<section id="approach">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">01 — The approach</div>
+      <h2>Security that scales with what you can do.</h2>
+      <p>The same lock on every door is either too heavy for a family or too light for your accountant. Each group gets the protection its access actually warrants.</p>
+    </div>
+
+    <div class="tw">
+      <div class="ts">
+        <table class="rt">
+          <thead><tr>
+            <th scope="col">Who</th><th scope="col">How they get in</th>
+            <th scope="col">How they get an account</th><th scope="col">Extra protection</th>
+          </tr></thead>
+          <tbody>
+            <tr>
+              <th scope="row">Patient &amp; family</th>
+              <td data-l="How they sign in">Phone number, then a 6-digit code by SMS</td>
+              <td data-l="How they get an account">Self sign-up, or invited by the family member who books</td>
+              <td data-l="Extra protection">New devices are announced to every other device</td>
+            </tr>
+            <tr>
+              <th scope="row">Caretaker &amp; field staff</th>
+              <td data-l="How they sign in">Phone number, then a 6-digit code</td>
+              <td data-l="How they get an account"><b>They apply themselves.</b> Your office approves before they can work</td>
+              <td data-l="Extra protection">Sees nothing but their own application until approved</td>
+            </tr>
+            <tr>
+              <th scope="row">Manager</th>
+              <td data-l="How they sign in">Phone number, then a 6-digit code</td>
+              <td data-l="How they get an account">Created by an Admin. Never self-serve</td>
+              <td data-l="Extra protection">Only ever sees their own area</td>
+            </tr>
+            <tr>
+              <th scope="row">Admin</th>
+              <td data-l="How they sign in">Phone number, then a 6-digit code</td>
+              <td data-l="How they get an account">Created by the tier above. Never self-serve</td>
+              <td data-l="Extra protection">Confirms again before money moves, and signs out when idle</td>
+            </tr>
+            <tr>
+              <th scope="row">Super Admin</th>
+              <td data-l="How they sign in">Phone number, then a 6-digit code</td>
+              <td data-l="How they get an account">Set up in person, once, at handover</td>
+              <td data-l="Extra protection">Every action recorded against their name</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="g g3" style="margin-top:20px">
+      <div class="c"><h3>No passwords anywhere</h3><p>Nobody has to remember anything. An elderly patient cannot be locked out by a forgotten password, and your office cannot have a password written on a sticky note under a keyboard.</p></div>
+      <div class="c"><h3>A code never expires on someone slow</h3><p>Codes last five minutes, and a fresh one can always be sent. Someone who types slowly with a tremor is never locked out — but an automated attack still is.</p></div>
+      <div class="c"><h3>Signing in never reveals who exists</h3><p>An unknown number gets exactly the same screen as a registered one. Nobody can use the sign-in page to discover whether a particular person is your patient.</p></div>
+    </div>
+
+    <div class="cl ci">
+      <h3>Extra care around money</h3>
+      <p>Signing in is only half of it. Before anyone approves a payout, changes a bank account or exports records in bulk, the platform <b>asks them to confirm it is really them</b> — however recently they signed in. Being logged in is not the same as being present at the keyboard.</p>
+      <p>The operations panel also signs itself out after fifteen idle minutes, so a screen left open on a desk is not an open door.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAMILY -->
+<section id="family">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">02 — Patient &amp; family</div>
+      <h2>One box. One button. Nothing to remember.</h2>
+      <p>The app opens straight onto the number entry. Hindi and Marathi are there in the corner for anyone who needs them, without making a first-time decision out of it.</p>
+    </div>
+
+    <div class="phr">
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="langbar"><span class="langsw">⊕ <b>English</b></span></div>
+          <div class="bdy mid">
+            <div class="logo" aria-hidden="true">H</div>
+            <div class="wordmark">Healthy Will</div>
+            <div class="tagline">Care for your family, at home</div>
+            <div class="fld" style="margin-top:26px">
+              <span class="fl2">Mobile number</span>
+              <div class="inp foc"><span class="pre">+91</span>98765 43210<span class="cur"></span></div>
+              <div class="hint">We’ll send a 6-digit code by SMS. Standard rates apply.</div>
+            </div>
+            <div class="bt">Send code</div>
+            <div class="hint" style="text-align:center;margin-top:16px;line-height:1.6">
+              By continuing you agree to our<br><a href="#family">Terms</a> and <a href="#family">Privacy Policy</a>
+            </div>
+          </div>
+          <div class="st"><div class="bt gh">Need help signing in?</div></div>
+        </div></div>
+        <div class="pcap"><b>The first screen</b><span>One box, one button — and a quiet language switcher</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">← Back</div>
+            <div class="tt">Enter the code</div>
+            <div class="ss">Sent to +91 98765 43210 · <a href="#family">Change</a></div>
+          </div>
+          <div class="bdy">
+            <div class="mc lf">
+              <span class="fl2" style="font-size:13.5px;font-weight:600;color:var(--ink-t)">6-digit code</span>
+              <div class="otp">
+                <div class="ob f">4</div><div class="ob f">8</div><div class="ob f">2</div>
+                <div class="ob cu"></div><div class="ob"></div><div class="ob"></div>
+              </div>
+              <div class="hint" style="margin-top:12px">The code expires in <b>4:21</b>.</div>
+              <div class="hint ok2" style="margin-top:7px">✓ On most phones the code fills itself in.</div>
+            </div>
+            <div class="mc">
+              <div class="lb">Didn’t get it?</div>
+              <div class="sbt">You can ask for a new code in <b>22 seconds</b>. Check your signal — SMS can be slow.</div>
+              <div class="bt off sm">Resend code · 22s</div>
+            </div>
+            <div class="mc" style="border-style:dashed">
+              <div class="lb">Still stuck</div>
+              <div class="sbt">Call us on <b>022 4000 1234</b> and we will sign you in together.</div>
+            </div>
+          </div>
+          <div class="st"><div class="bt">Verify and continue</div></div>
+        </div></div>
+        <div class="pcap"><b>The code</b><span>A visible timer, an always-available resend, and a phone number</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">← Back</div>
+            <div class="tt">Enter the code</div>
+            <div class="ss">Sent to +91 98765 43210</div>
+          </div>
+          <div class="bdy">
+            <div class="mc bdr lf">
+              <span class="fl2" style="font-size:13.5px;font-weight:600;color:var(--bd-x)">6-digit code</span>
+              <div class="otp">
+                <div class="ob er">4</div><div class="ob er">8</div><div class="ob er">2</div>
+                <div class="ob er">1</div><div class="ob er">9</div><div class="ob er">0</div>
+              </div>
+              <div class="hint er" style="margin-top:12px"><span>⚠</span><span>That code isn’t right. <b>3 attempts left</b>, then you’ll need to wait 30 minutes.</span></div>
+            </div>
+            <div class="mc">
+              <div class="lb">Try this first</div>
+              <div class="sbt">Use the <b>newest</b> message — asking for a new code cancels the old one.</div>
+              <div class="bt gh sm">Send a new code</div>
+            </div>
+            <div class="mc wn">
+              <div class="lb">⚠ If you get locked out</div>
+              <div class="sbt">Waiting 30 minutes always works. Or call <b>022 4000 1234</b> and we’ll help you in straight away.</div>
+            </div>
+          </div>
+          <div class="st"><div class="bt">Verify and continue</div></div>
+        </div></div>
+        <div class="pcap"><b>Wrong code</b><span>Says how many tries remain, and what happens at zero</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">Step 2 of 3</div>
+            <div class="tt">Who are you?</div>
+            <div class="ss">This decides what you see</div>
+          </div>
+          <div class="bdy">
+            <div class="stp2"><div class="dn"></div><div class="on"></div><div></div></div>
+            <div class="rolec">
+              <span class="ic" aria-hidden="true">♡</span>
+              <div><b>I’m arranging care</b><span>For a parent or relative. You book visits, see reports and pay.</span></div>
+              <span class="ar">›</span>
+            </div>
+            <div class="rolec">
+              <span class="ic" aria-hidden="true">◉</span>
+              <div><b>Care is for me</b><span>You control what your family can see about you.</span></div>
+              <span class="ar">›</span>
+            </div>
+            <div class="cl ci" style="font-size:14px;margin-top:14px">
+              Whoever is cared for always controls their own privacy — <b>not whoever pays the bill</b>.
+            </div>
+          </div>
+        </div></div>
+        <div class="pcap"><b>Sign up · who you are</b><span>Two plain choices, in the words people actually use</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">Signed in as Priya · daughter</div>
+            <div class="tt">New sign-in</div>
+            <div class="ss">We noticed a new phone</div>
+          </div>
+          <div class="bdy">
+            <div class="mc wn lf">
+              <div class="lb">⚠ Was this you?</div>
+              <div class="h1c">A new phone signed in</div>
+              <div class="sbt">
+                <b>Samsung Galaxy A54</b><br>
+                Mumbai, Maharashtra · 11 Nov, 9:42 pm<br>
+                Using your number ending 3210
+              </div>
+              <div class="b2r">
+                <div class="bt dg">Not me</div>
+                <div class="bt gh">That was me</div>
+              </div>
+            </div>
+            <div class="mc">
+              <div class="lb">Your devices</div>
+              <div class="doc"><span class="dic ok3">✓</span><div><b>iPhone 13</b><span>This device · Mumbai</span></div></div>
+              <div class="doc"><span class="dic wt">!</span><div><b>Galaxy A54</b><span>New · 2 minutes ago</span></div></div>
+            </div>
+            <div class="cl ci" style="font-size:14px">
+              Tapping <b>Not me</b> signs that phone out immediately and tells us to look into it.
+            </div>
+          </div>
+        </div></div>
+        <div class="pcap"><b>A new device appears</b><span>Every other device is told, with a one-tap way to refuse</span></div>
+      </div>
+    </div>
+
+    <div class="cl ck">
+      <h3>The design decision that matters most here</h3>
+      <p>Every dead end on these screens ends with <b>a phone number that reaches a human</b>. Most apps end with “contact support”. For a daughter trying to arrange care for her mother at 10pm, that difference is the whole product.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CARETAKER -->
+<section id="caretaker">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">03 — Caretaker &amp; field staff</div>
+      <h2>Anyone can apply. Only your office decides who works.</h2>
+      <p>A caretaker downloads the app, fills in her details and uploads her documents. The completed application lands in your queue. Until you approve her, she can see nothing but her own application — and can never be given a visit.</p>
+    </div>
+
+    <div class="flow">
+      <div class="fs"><span class="num">1</span><b>She signs up</b><span>Her phone number and a code. No invitation needed.</span></div>
+      <div class="fs"><span class="num">2</span><b>Profile and documents</b><span>Skills, languages, areas she can travel to, then ID, certificates, police verification, bank details.</span></div>
+      <div class="fs gate"><span class="num">3</span><b>She submits</b><span><b>Cannot submit until everything is uploaded</b> — so you never receive a half-finished application.</span></div>
+      <div class="fs done"><span class="num">4</span><b>Your office approves</b><span>You check each document and activate her. Only now can she be assigned a visit.</span></div>
+    </div>
+
+    <div class="phr" style="margin-top:28px">
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="langbar"><span class="langsw">⊕ <b>English</b></span></div>
+          <div class="bdy mid">
+            <div class="logo" aria-hidden="true">H</div>
+            <div class="wordmark">Work with Healthy Will</div>
+            <div class="tagline">Apply to join as a nurse, attendant or physiotherapist</div>
+            <div class="fld" style="margin-top:24px">
+              <span class="fl2">Your mobile number</span>
+              <div class="inp foc"><span class="pre">+91</span>98765 43210<span class="cur"></span></div>
+              <div class="hint">We’ll send a 6-digit code to confirm it’s you.</div>
+            </div>
+            <div class="bt">Start my application</div>
+            <div class="hint" style="text-align:center;margin-top:15px;line-height:1.6">
+              Already applied? <a href="#caretaker">Check your status</a>
+            </div>
+            <div class="cl ci" style="font-size:13.5px;margin-top:15px">
+              You’ll need your <b>ID, qualification certificates and bank details</b> to finish. You can save and come back.
+            </div>
+          </div>
+        </div></div>
+        <div class="pcap"><b>Apply</b><span>Open to anyone — approval is where your office decides</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">Step 3 of 4</div>
+            <div class="tt">Your documents</div>
+            <div class="ss">All four are needed before you can submit</div>
+          </div>
+          <div class="bdy">
+            <div class="stp2"><div class="dn"></div><div class="dn"></div><div class="on"></div><div></div></div>
+            <div class="mc">
+              <div class="doc"><span class="dic ok3">✓</span><div><b>Aadhaar or ID</b><span>Uploaded · awaiting check</span></div></div>
+              <div class="doc"><span class="dic ok3">✓</span><div><b>Nursing certificate</b><span>Uploaded · awaiting check</span></div></div>
+              <div class="doc"><span class="dic wt">!</span><div><b>Police verification</b><span>Needed before you can start</span></div></div>
+              <div class="doc"><span class="dic nn">+</span><div><b>Bank details</b><span>For your payments</span></div></div>
+            </div>
+            <div class="mc wn">
+              <div class="lb">⚠ Two still needed</div>
+              <div class="sbt"><b>You can’t submit until everything is uploaded.</b> This is so your application isn’t rejected for something missing.</div>
+            </div>
+            <div class="mc" style="border-style:dashed">
+              <div class="lb">You can stop here</div>
+              <div class="sbt">Your progress is saved. Finish whenever you have the papers to hand.</div>
+            </div>
+          </div>
+          <div class="st">
+            <div class="bt">Upload police verification</div>
+            <div class="bt off sm">Submit application · 2 documents left</div>
+          </div>
+        </div></div>
+        <div class="pcap"><b>Documents</b><span>She sees her own approval status — no chasing calls</span></div>
+      </div>
+
+      <div>
+        <div class="ph"><div class="scr">
+          <div class="hd">
+            <div class="wh">Caretaker · Priya N.</div>
+            <div class="tt">Almost there</div>
+            <div class="ss">Your application is with the office</div>
+          </div>
+          <div class="bdy">
+            <div class="mc wn lf">
+              <div class="lb">⏳ Application submitted</div>
+              <div class="h1c">The office is reviewing you</div>
+              <div class="sbt">Submitted 10 Nov. Most applications are reviewed within two working days. <b>You’ll get a message the moment you’re approved</b> — no need to call and ask.</div>
+            </div>
+            <div class="mc">
+              <div class="lb">Your progress</div>
+              <div class="doc"><span class="dic ok3">✓</span><div><b>Account created</b><span>9 Nov</span></div></div>
+              <div class="doc"><span class="dic ok3">✓</span><div><b>ID approved</b><span>10 Nov</span></div></div>
+              <div class="doc"><span class="dic wt">!</span><div><b>Certificate</b><span>Being checked</span></div></div>
+              <div class="doc"><span class="dic nn">○</span><div><b>Activation</b><span>Last step</span></div></div>
+            </div>
+            <div class="mc">
+              <div class="lb">While you wait</div>
+              <div class="sbt">You can still update your profile, languages and the areas you can travel to.</div>
+              <div class="bt gh sm">Edit my profile</div>
+            </div>
+            <div class="mc" style="border-style:dashed">
+              <div class="lb">Questions</div>
+              <div class="sbt">Call the office on <b>022 4000 1234</b>.</div>
+            </div>
+          </div>
+          <div class="tb"><span class="on" data-i="◷">Status</span><span data-i="◉">Profile</span><span data-i="☏">Help</span></div>
+        </div></div>
+        <div class="pcap"><b>Waiting for approval</b><span>A limited app, not a locked door</span></div>
+      </div>
+    </div>
+
+    <div class="g g3" style="margin-top:28px">
+      <div class="c"><h3>A pending account sees nothing</h3><p>Until you activate her she can open her own profile, her own documents and her own status. No patients, no staff list, no schedule. An unapproved applicant is a stranger with a form.</p></div>
+      <div class="c"><h3>You never get half an application</h3><p>She cannot submit until every document is attached, so your queue holds only complete files ready to be judged. It also stops her waiting on a rejection for something she could have fixed.</p></div>
+      <div class="c"><h3>Your office sets what she becomes</h3><p>Nurse or attendant, employed or on contract, which areas she covers — you decide that at approval. It is never a dropdown she picks for herself.</p></div>
+      <div class="c"><h3>Duplicates are flagged, not blocked</h3><p>If an application matches an existing one — same ID, same bank account — it is marked for you to look at. Never auto-rejected, because a shared name should not cost someone a job.</p></div>
+      <div class="c"><h3>Send it back instead of rejecting</h3><p>A blurred certificate does not need a rejection. Return the application with a note, and she fixes that one item and resubmits.</p></div>
+      <div class="c"><h3>Abandoned applications clear themselves</h3><p>An application left untouched for 90 days is deleted. Your queue stays real, and nobody’s documents sit on our servers indefinitely.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- OFFICE -->
+<section id="office">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">04 — Your office</div>
+      <h2>Two keys for anyone who can move money.</h2>
+      <p>Your team signs in on a computer with the same phone number and code. The difference is what happens next: every action is recorded against their name, the screen locks itself when idle, and moving money asks for confirmation.</p>
+    </div>
+
+    <div class="ad">
+      <div class="adtb">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="adurl">admin.healthywill.in</span>
+      </div>
+      <div class="adbd" style="padding:0">
+        <div class="adsplit" style="width:100%">
+          <div class="adside">
+            <h3>Healthy&nbsp;Will Operations</h3>
+            <p>The control room for visits, staff, patients and money.</p>
+            <ul>
+              <li>Every action is recorded against your name</li>
+              <li>Signs you out after 15 minutes idle</li>
+              <li>Approving money asks you to confirm it is you</li>
+            </ul>
+          </div>
+          <div style="display:grid;place-items:center;padding:34px 22px;background:var(--sf)">
+            <div style="width:100%;max-width:330px">
+              <div class="sct">Staff sign-in</div>
+              <h3 style="font-size:21px;margin-bottom:3px">Welcome back</h3>
+              <p style="font-size:14.5px;color:var(--ink-2)">Use the number registered with your account.</p>
+              <div class="fld" style="margin-top:17px">
+                <span class="fl2">Mobile number</span>
+                <div class="inp foc"><span class="pre">+91</span>98201 55500<span class="cur"></span></div>
+              </div>
+              <div class="bt">Send code</div>
+              <div class="hint" style="margin-top:13px">
+                We’ll text you a 6-digit code. Your session ends automatically after 15 idle minutes.
+              </div>
+              <div class="cl cw" style="font-size:13.5px;margin-top:15px">
+                <b>Office accounts are created for you.</b> If you don’t have one, ask your administrator — there is no sign-up on this panel.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sub"><h3>Asking again before money moves</h3><p>Being signed in is not the same as being present. Certain actions re-check that it is really you, however recently you signed in.</p></div>
+
+    <div class="ad">
+      <div class="adtb"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span class="adurl">admin.healthywill.in/staff-earnings</span></div>
+      <div class="adbd">
+        <div class="adcard" style="max-width:430px">
+          <div class="sct">Confirm it’s you</div>
+          <h3 style="font-size:20px">You’re about to approve ₹ 1,84,500</h3>
+          <p style="font-size:14.5px;color:var(--ink-2);margin-top:6px">Payouts to <b>14 staff</b> for 1–15 November. Once approved this is recorded against your name and cannot be quietly undone.</p>
+          <div class="fld" style="margin-top:15px">
+            <span class="fl2">Enter the code we just sent you</span>
+            <div class="otp"><div class="ob f">3</div><div class="ob f">9</div><div class="ob cu"></div>
+              <div class="ob"></div><div class="ob"></div><div class="ob"></div></div>
+          </div>
+          <div class="b2r" style="margin-top:14px">
+            <div class="bt gh">Cancel</div><div class="bt">Confirm approval</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tw" style="margin-top:20px">
+      <div class="ts">
+        <table class="rt">
+          <thead><tr><th scope="col">Action</th><th scope="col">Why it asks again</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Approving or paying staff</th><td data-l="Why">The largest sum anyone moves in a normal week</td></tr>
+            <tr><th scope="row">Changing bank details</th><td data-l="Why">The classic fraud: quietly redirect someone’s wages</td></tr>
+            <tr><th scope="row">Changing a registered phone number</th><td data-l="Why">Otherwise it becomes a way to take over an account</td></tr>
+            <tr><th scope="row">Creating an admin, or changing what someone can do</th><td data-l="Why">Granting power deserves the same care as spending money</td></tr>
+            <tr><th scope="row">Exporting patient or staff data in bulk</th><td data-l="Why">The moment a leak becomes a thousand records, not one</td></tr>
+            <tr><th scope="row">Adding a new computer or phone</th><td data-l="Why">A new device is announced to the existing ones, and can be refused</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cl ci">
+      <h3>Signed out after 15 minutes</h3>
+      <p>An operations screen left open on a desk is a patient-data leak waiting for anyone who walks past. The admin panel signs itself out after 15 idle minutes, and fully after 12 hours. Signing back in takes seconds.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SUPER ADMIN -->
+<section id="super">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">05 — Super Admin</div>
+      <h2>The account that can do anything.</h2>
+      <p>One person in your business holds this. It is set up in person at handover, it never signs up online, and everything it does is on the record.</p>
+    </div>
+
+    <div class="g g2">
+      <div>
+        <div class="ad">
+          <div class="adtb"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="adurl">admin.healthywill.in</span></div>
+          <div class="adbd">
+            <div class="adcard">
+              <div class="sct">Super Admin</div>
+              <h3 style="font-size:20px">Welcome back</h3>
+              <p style="font-size:14.5px;color:var(--ink-2);margin-top:5px">Use the number registered at handover.</p>
+              <div class="fld" style="margin-top:15px">
+                <span class="fl2">Mobile number</span>
+                <div class="inp foc"><span class="pre">+91</span>98201 00001<span class="cur"></span></div>
+              </div>
+              <div class="bt">Send code</div>
+              <div class="hint" style="margin-top:12px">
+                This account can see and change everything. Every action it takes is recorded against your name.
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pcap" style="max-width:none"><b>Super Admin sign-in</b><span>Most power, simplest screen</span></div>
+      </div>
+
+      <div>
+        <div class="ad">
+          <div class="adtb"><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+            <span class="adurl">admin.healthywill.in/staff/anil-k/permissions</span></div>
+          <div class="adbd">
+            <div class="adcard">
+              <div class="sct">Confirm it’s you</div>
+              <h3 style="font-size:20px">You’re making Anil K. an Admin</h3>
+              <p style="font-size:14.5px;color:var(--ink-2);margin-top:6px">
+                He will be able to approve payouts, change bank details and export records. <b>This is recorded against your name.</b>
+              </p>
+              <div class="fld" style="margin-top:15px">
+                <span class="fl2">Enter the code we just sent you</span>
+                <div class="otp"><div class="ob f">5</div><div class="ob cu"></div><div class="ob"></div>
+                  <div class="ob"></div><div class="ob"></div><div class="ob"></div></div>
+              </div>
+              <div class="b2r" style="margin-top:14px">
+                <div class="bt gh">Cancel</div><div class="bt">Confirm</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="pcap" style="max-width:none"><b>Granting power</b><span>Treated as carefully as spending money</span></div>
+      </div>
+    </div>
+
+    <div class="sub"><h3>Who can create whom</h3><p>Nobody creates their own level or above.</p></div>
+    <div class="tw">
+      <div class="ts">
+        <table class="rt">
+          <thead><tr><th scope="col">Account</th><th scope="col">Created by</th><th scope="col">Can create</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Super Admin</th><td data-l="Created by">In person at handover, by us with you</td><td data-l="Can create">Everyone</td></tr>
+            <tr><th scope="row">Admin</th><td data-l="Created by">Super Admin</td><td data-l="Can create">Managers</td></tr>
+            <tr><th scope="row">Manager</th><td data-l="Created by">Admin</td><td data-l="Can create">Nobody</td></tr>
+            <tr><th scope="row">Caretaker &amp; field staff</th><td data-l="Created by"><b>They apply themselves.</b> Your office approves them</td><td data-l="Can create">Nobody</td></tr>
+            <tr><th scope="row">Patient &amp; family</th><td data-l="Created by">Themselves, or invited by a family member</td><td data-l="Can create">Family members, with the patient’s consent</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- SAFETY -->
+<section id="safety">
+  <div class="w">
+    <div class="sh">
+      <div class="sn">06 — The quiet details</div>
+      <h2>What happens when things go wrong.</h2>
+      <p>Most sign-in design is about the unhappy paths. These are the ones that decide whether someone calls you or gives up.</p>
+    </div>
+
+    <div class="g g3">
+      <div class="c"><h3>Signing out clears the phone</h3><p>Everything held on the device — visit notes, queued photos, cached records — is wiped on sign-out. A shared or resold phone keeps nothing.</p></div>
+      <div class="c"><h3>A lost phone is handled from your office</h3><p>You can sign out any single device without touching the others. A caretaker who loses her phone keeps working from a new one the same day.</p></div>
+      <div class="c"><h3>Suspending someone ends their session</h3><p>The moment your office suspends a staff member, every device they are signed in on stops working. Not at the next sign-in — immediately.</p></div>
+      <div class="c"><h3>A family member needs the patient’s consent</h3><p>A son requesting access to his mother’s record cannot be approved by your office alone. She confirms on her own number first.</p></div>
+      <div class="c"><h3>Permissions are explained before they’re asked</h3><p>Before the phone asks for location or the camera, one plain screen says why and what happens if refused. <b>Refusing never blocks a visit.</b></p></div>
+      <div class="c"><h3>People can leave, and take their data</h3><p>Deleting an account and downloading a copy of the records are both built in. It is a legal right under India’s data protection law, not a feature.</p></div>
+    </div>
+
+    <div class="sub"><h3>What the client should confirm</h3></div>
+    <div class="tw">
+      <div class="ts">
+        <table class="rt">
+          <thead><tr><th scope="col">Question</th><th scope="col">What we have assumed</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">The support number on every screen</th><td data-l="Assumed">A real, answered number during working hours. We have used <code>022 4000 1234</code> as a placeholder</td></tr>
+            <tr><th scope="row">Who holds Super Admin</th><td data-l="Assumed">One person, set up in person at handover. We will want their number on the day</td></tr>
+            <tr><th scope="row"><b>Who approves caretaker applications</b></th><td data-l="Assumed">Admins, and Managers for their own area only. This is now the control that decides who works for you, so it is worth being deliberate about</td></tr>
+            <tr><th scope="row">How quickly applications are reviewed</th><td data-l="Assumed">Two working days, which is what the app tells the applicant. An unreviewed application is a caretaker you are not yet able to send out</td></tr>
+            <tr><th scope="row">Terms and Privacy Policy</th><td data-l="Assumed">Both must exist before launch and be linked from the sign-in screen. They need your lawyer, not us</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="cl ci">
+      <h3>What we’d like from you</h3>
+      <p>Tell us anything here that does not match how you work — particularly the wording a family reads on the first screen, and who in your office should be allowed to approve new caretakers. Those two shape everything else.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="ft">
+  <div class="w">
+    <p><strong>Healthy Will — signing in.</strong> Every screen is drawn at a real phone and desktop size with the production colours and type, so what you see is what gets built. Names, numbers and codes are illustrative.</p>
+    <p style="margin-top:7px">Prepared for your review and approval.</p>
+  </div>
+</footer>
+
+</body>
+</html>
